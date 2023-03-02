@@ -17,7 +17,7 @@ public class FoodInformationController extends BaseController{
     @Autowired
     private FoodInformationService foodInformationService;
 
-    @GetMapping
+    @GetMapping(value = "")
     public ResponseEntity getFoodInformation(
             @RequestParam(value = "id", required = false) Integer id,
             @RequestParam(value = "name", required = false) String name
@@ -44,7 +44,7 @@ public class FoodInformationController extends BaseController{
             return getNotFoundErrorResponse(TableNames.FOOD_INFORMATION.getName(), "id",String.valueOf(id));
     }
 
-    @PostMapping
+    @PostMapping(value = "")
     public ResponseEntity addFoodInformation(@RequestBody FoodInformation foodInformation){
         return ResponseEntity.status(HttpStatus.OK.value()).body(foodInformationService.addFoodInformation(foodInformation));
     }

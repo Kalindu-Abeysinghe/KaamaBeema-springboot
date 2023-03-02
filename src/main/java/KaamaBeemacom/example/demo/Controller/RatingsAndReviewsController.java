@@ -13,7 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(path = "ratingsAndReviews")
+@RequestMapping(path = "/ratingsAndReviews")
 public class RatingsAndReviewsController extends BaseController{
 
     @Autowired
